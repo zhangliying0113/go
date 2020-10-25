@@ -75,3 +75,12 @@ Mac平台交叉编译：
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
 CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
 ```
+
+### 字符串、字符、字节 都是什么？
+
+- 字符串：双引号包裹的是字符串
+
+- 字符：单引号包裹的是字符，单个字母、单个符号、单个文字
+
+- 字节：1byte=8bit
+go语言中字符串都是UTF8编码，UTF8编码中一个常用汉字一般占用3个字节

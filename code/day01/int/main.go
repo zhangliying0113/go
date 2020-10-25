@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// go 语言无法直接定义二进制
 	// 十进制
 	var i1 = 101
 	fmt.Printf("%d\n", i1) // %d:十进制
