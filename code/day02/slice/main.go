@@ -100,7 +100,7 @@ func main() {
 
 	aa1[0] = 100
 	fmt.Println(aa1, aa2, aa3) // [100 3 5] [100 3 5] [1 3 5]
-
+ 
 	// 将aa1 中索引为1的3这个元素删掉
 	aa1 = append(aa1[:1], aa1[2])
 	fmt.Println(aa1, cap(aa1)) // [100 5] 3
