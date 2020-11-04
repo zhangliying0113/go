@@ -14,7 +14,7 @@ type studentMgr struct {
 // 1. 查看所有学生信息
 func (s studentMgr) showStudents() {
 	for _, student := range s.allStudents {
-		fmt.Printf("学生id:%d 学生姓名：%s", student.id, student.name)
+		fmt.Printf("学生id:%d 学生姓名：%s\n", student.id, student.name)
 	}
 }
 
