@@ -15,7 +15,7 @@ func worker(id int, jobs <-chan int, results chan<- int) {
 }
 
 func main() {
-	jobs := make(chan int, 100)
+	jobs := make(chan int, 2)
 	results := make(chan int, 100)
 
 	// 开启 3 个 goroutine
@@ -31,6 +31,7 @@ func main() {
 
 	//输出结果，可以使用 channel 阻塞或者 wait 来阻塞主协成直到子协成运行完毕
 	for r := 1; r <= 5; r++ {
-		<-results
+		a := <-results
+		fmt.Printf("result:%d\n", a)
 	}
 }

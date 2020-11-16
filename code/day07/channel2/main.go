@@ -31,9 +31,14 @@ func f2(ch1 <-chan int, ch2 chan<- int) {
 		}
 		ch2 <- x * x
 	}
-	once.Do(func() {
+	// once.Do(func() {
+	// 	close(ch2)
+	// }) // 确保某个操作只执行一次
+
+	f := func() {
 		close(ch2)
-	}) // 确保某个操作只执行一次
+	}
+	once.Do(f)
 }
 
 func main() {
